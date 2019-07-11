@@ -1,14 +1,13 @@
 def ask_number
-  puts "How tall do you want the pyramid between 1 and 25?"
+  puts "How tall do you want the diamond between 1 and 25? It needs to be an odd figure"
   print "> "
   number = gets.chomp.to_i
   i = 1
-    if number < 1 || number > 25
-      print "Tu n'as pas choisis un nombre entre 1 et 25, recommence en suivant la consigne : "
+    while number.to_f%2==0 || number < 1 || number > 25
+      print "Tu n'as pas choisis un nombre entre 1 et 25 ou le chiffre est pair, recommence en suivant la consigne : "
       number = gets.chomp.to_i
-    else
+    end
   return number
-end
 end
 
 def half_pyramid
@@ -26,31 +25,6 @@ def full_pyramid
   end
 end
 puts full_pyramid
-
-def ask_number
-  puts "How tall do you want the diamond between 1 and 25? It needs to be an odd figure"
-  print "> "
-  number = gets.chomp.to_i
-  i = 1
-    if number < 1 || number > 25
-      print "Tu n'as pas choisis un nombre entre 1 et 25 ou le chiffre est pair, recommence en suivant la consigne : "
-      number = gets.chomp.to_i
-    else
-  return number
-end
-end
-
-def ask_number
-  puts "How tall do you want the diamond between 1 and 25? It needs to be an odd figure"
-  print "> "
-  number = gets.chomp.to_i
-  i = 1
-    while number.to_f%2==0 || number < 1 || number > 25
-      print "Tu n'as pas choisis un nombre entre 1 et 25 ou le chiffre est pair, recommence en suivant la consigne : "
-      number = gets.chomp.to_i
-    end
-  return number
-end
 
 def wtf_pyramid
   number = ask_number
