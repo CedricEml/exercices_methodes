@@ -45,12 +45,11 @@ def ask_number
   print "> "
   number = gets.chomp.to_i
   i = 1
-    if number.to_f%2==0 && number < 1 || number > 25
+    while number.to_f%2==0 || number < 1 || number > 25
       print "Tu n'as pas choisis un nombre entre 1 et 25 ou le chiffre est pair, recommence en suivant la consigne : "
       number = gets.chomp.to_i
-    else
+    end
   return number
-end
 end
 
 def wtf_pyramid
